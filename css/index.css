@@ -1,0 +1,163 @@
+.body {
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.names {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 50%;
+    height: 10%;
+}
+
+.names span {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.lifes {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 70%;
+    height: 8%;
+}
+
+.life-background {
+    position: relative;
+    display: block;
+    height: 70%;
+    width: 40%;
+    border-radius: 0.1em;
+    background: grey;
+}
+
+.your-life {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 0.2em;
+    background-color: green;
+    transition: 2s;
+}
+
+.monster-life {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 0.2em;
+    background-color: green;
+    transition: 2s;
+}
+
+.start-game-background {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 20%;
+    box-shadow: 0 0.2em 0.2em 0;
+    border: 0.05em #000 solid;
+}
+
+.game-action {
+    font-size: 1.5em;
+    position: relative;
+    display: block;
+    width: 17%;
+    height: 50%;
+    border-radius: 0.3em;
+}
+
+.start-game {
+    background: lightgreen;
+}
+
+.start-game:hover {
+    border: 0.2em solid rgb(60, 219, 60);
+}
+
+.btn-atk {
+    background: lightcoral;
+}
+
+.btn-atk:hover {
+    border: 0.2em solid coral;
+}
+
+.btn-special-atk {
+    background: lightsalmon;
+}
+
+.btn-special-atk:hover {
+    border: 0.2em solid salmon;
+}
+
+.btn-heal {
+    background: lightgreen;
+}
+
+.btn-heal:hover {
+    border: 0.2em solid green;
+}
+
+.btn-give-up {
+    background: white;
+}
+
+.btn-give-up:hover {
+    border: 0.2em solid black;
+}
+
+.actions {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 80%;
+    height: 40%;
+    box-shadow: 0 0.2em 0.2em 0;
+    border: 0.05em #000 solid;
+    overflow-y: scroll;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    font-weight: bold;
+    width: 70%;
+    height: 5%;
+}
+
+.green {
+    background: lightgreen;
+    color: green;
+}
+
+.red {
+    background: lightcoral;
+    color: red;
+}

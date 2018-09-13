@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vs Monster</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <div class="names">
+            <span>You</span>
+            <span>Monster</span>
+        </div>
+        <div class="lifes">
+            <span class="life-background">
+                <span class="your-life" :style="yourLifeBar">{{yourLife}}</span>
+            </span>
+
+            <span class="life-background">
+                <span class="monster-life" :style="monsterLifeBar">{{monsterLife}}</span>
+            </span>
+        </div>
+        <div class="start-game-background" :style="actionsJustCnt">
+            <button type="button" class="game-action start-game" @click="gameRunning = !gameRunning" v-if="!gameRunning">Start New Game</button>
+            <template class="" v-else="gameRunning">
+                <button type="button" class="game-action btn-atk" placeholder="attack" @click="atkMonster()">ATTACK</button>
+                <button type="button" class="game-action btn-special-atk" placeholder="special atk" @click="specialAtk()()">SPECIAL ATTACK</button>
+                <button type="button" class="game-action btn-heal" placeholder="heal" @click="heal()">HEAL</button>
+                <button type="button" class="game-action btn-give-up" placeholder="give up" @click="gameRunning = !gameRunning">GIVE UP</button>
+            </template>
+        </div>
+        <div class="actions">
+            <span class="action" v-for="action in actions" :class="action.class">
+                <span>
+                    {{action.msg}}
+                </span>
+            </span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
