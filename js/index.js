@@ -75,7 +75,7 @@ new Vue({
             }
             else {
                 this.monsterLife = 0;
-                this.actions.push("You won!!!")
+                this.actions.push({msg: "You won!!!", class: "green"});
             }
             // monster atk
             let newYourLife = this.yourLife - ((Math.random() * 10) + 1);
@@ -85,7 +85,7 @@ new Vue({
             }
             else {
                 this.yourLife = 0;
-                this.actions.push("The Monster won!!!")
+                this.actions.push({msg: "The Monster won!!!", class: "red"});
             }
 
             if(this.monsterLife <= 0 || this.yourLife <= 0) {
@@ -100,7 +100,7 @@ new Vue({
             }
             else {
                 this.yourLife = 100;
-                this.actions.push("You are already 100 life point");
+                this.actions.push({msg: "You are already 100 life point", class: "green"});
             }
             // monster atk
             newYourLife = this.yourLife - ((Math.random() * 10) + 1);
@@ -110,7 +110,7 @@ new Vue({
             }
             else {
                 this.yourLife = 0;
-                this.actions.push("The Monster won!!!")
+                this.actions.push({msg: "The Monster won!!!", class: "red"});
             }
 
             if(this.monsterLife <= 0 || this.yourLife <= 0) {
